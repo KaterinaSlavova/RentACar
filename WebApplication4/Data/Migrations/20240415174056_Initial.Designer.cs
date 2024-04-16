@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication4.Data;
+using Rent_a_Car.Data;
 
 #nullable disable
 
-namespace WebApplication4.Data.Migrations
+namespace Rent_a_Car.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20240415174056_Initial")]
