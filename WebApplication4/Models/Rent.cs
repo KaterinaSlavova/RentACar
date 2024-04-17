@@ -9,7 +9,7 @@ namespace Rent_a_Car.Models
         public string FirstName { get; set; }
         public string Email { get; set; }
         public string CarId { get; set; }
-        public virtual Car Car { get; set; }
+       // public virtual Car Car { get; set; }
         public DateTime StartDay {get;set;}
         public DateTime EndDay { get;set;}
 

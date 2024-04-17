@@ -56,6 +56,7 @@ namespace Rent_a_Car.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,Email,CarId,StartDay,EndDay")] Rent rent)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Add(rent);
