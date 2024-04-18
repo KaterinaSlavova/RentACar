@@ -8,62 +8,35 @@
 
 <p>
     <a class="btn btn-outline-primary" asp-action="Create">
-        Create New
+        Rent
     </a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CarId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndDay)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CarId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDay)
-            </td>
-            <td>
-                    <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                        <i class="fa-solid fa-pen-to-square"></i>  Edit
-                    </a>
+<div class="text-center">
+    @foreach (var item in Model)
+    {
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Name: @Html.DisplayFor(modelItem => item.FirstName)</h5>
+                        <p class="card-text">Email: @Html.DisplayFor(modelItem => item.Email)</p>
+                    </div>
+                     <div class="card-footer" style="background-color: #DA291C;">
+                            <small class="text-body-secondary">Currently rented</small>
+                            <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-pen-to-square"></i>  Edit
+                            </a>
 
-                    <a asp-action="Details" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                        <i class="fa-solid fa-info"></i>  Details
-                    </a>
+                            <a asp-action="Details" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-info"></i>  Details
+                            </a>
 
-                    <a asp-action="Delete" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                        <i class="fa-solid fa-trash"></i> Delete
-                    </a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                            <a asp-action="Delete" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </a>
+                     </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
