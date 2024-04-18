@@ -5,7 +5,9 @@
 }
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <div class="text-center">
+    <h1>coming soon to our garage</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card h-100">
@@ -57,3 +59,114 @@
         </div>
     </div>
 </div>
+
+
+<div class="text-center">
+    <h1>popular cars</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2024-porsche-911-st-exterior-112-64c929acc5b31.jpg?crop=0.578xw:0.651xh;0.0993xw,0.163xh&resize=768:*" class="card-img-top" style="height: 200px; object-fit: cover;" alt="porsche 911 gt">
+                <div class="card-body">
+                    <h5 class="card-title">Porsche 911 gt3</h5>
+                    <p class="card-text">A stable car great for the roads and the track</p>
+                </div>
+                <div class="card-footer" style="background-color: #4CBB17;">
+                    <small class="text-body-secondary">Last rented 1 day ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZ-7PkUOYApmX7NL2nDDZkf8V9pR-uZ5LNg&s" class="card-img-top" style="height: 200px; object-fit: cover;" alt="rolls royce spectre">
+                <div class="card-body">
+                    <h5 class="card-title">Rolls Royce Spectre</h5>
+                    <p class="card-text">A luxurious car used for parties and official events</p>
+                </div>
+                @*  @foreach( var item in Model)
+                {
+                @if (DateTime.Now >= @Html.DisplayFor(modelItem => item.StartDay) && DateTime.Now <= @Html.DisplayFor(modelItem => item.EndDay))
+                { *@
+                <div class="card-footer" style="background-color: #DA291C; ">
+                    <small class="text-body-secondary">Currently rented </small>
+                </div>
+                @*  }
+                else
+                { *@
+                @* <div class="card-footer" style="background-color: #4CBB17;">
+                <small class="text-body-secondary">Rent for@Html.DisplayFor(modelItem => item.Price)$</small>
+                </div> *@
+                @*    }
+                } *@
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmXFwVJvFtSGxqkgXoorgCgVkKkBOb_Kk28qZTFOOsg&s" class="card-img-top" style="height: 200px; object-fit: cover;" alt="mustang mach e">
+                <div class="card-body">
+                    <h5 class="card-title">Mustang Mach E</h5>
+                    <p class="card-text">A car suitable for off road and city drives</p>
+                </div>
+                <div class="card-footer" style="background-color: #4CBB17; ">
+                    <small class="text-body-secondary">Last rented 6 days ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="text-center">
+    <h1>best value car</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/2024-porsche-911-st-exterior-112-64c929acc5b31.jpg?crop=0.578xw:0.651xh;0.0993xw,0.163xh&resize=768:*" class="card-img-top" style="height: 200px; object-fit: cover;" alt="porsche 911 gt">
+                <div class="card-body">
+                    <h5 class="card-title">Porsche 911 gt3</h5>
+                    <p class="card-text">A stable car great for the roads and the track</p>
+                </div>
+                <div class="card-footer" style="background-color: #4CBB17;">
+                    <small class="text-body-secondary">Last rented 1 day ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVZ-7PkUOYApmX7NL2nDDZkf8V9pR-uZ5LNg&s" class="card-img-top" style="height: 200px; object-fit: cover;" alt="rolls royce spectre">
+                <div class="card-body">
+                    <h5 class="card-title">Rolls Royce Spectre</h5>
+                    <p class="card-text">A luxurious car used for parties and official events</p>
+                </div>
+                @*  @foreach( var item in Model)
+                {
+                @if (DateTime.Now >= @Html.DisplayFor(modelItem => item.StartDay) && DateTime.Now <= @Html.DisplayFor(modelItem => item.EndDay))
+                { *@
+                <div class="card-footer" style="background-color: #DA291C; ">
+                    <small class="text-body-secondary">Currently rented </small>
+                </div>
+                @*  }
+                else
+                { *@
+                @* <div class="card-footer" style="background-color: #4CBB17;">
+                <small class="text-body-secondary">Rent for@Html.DisplayFor(modelItem => item.Price)$</small>
+                </div> *@
+                @*    }
+                } *@
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmXFwVJvFtSGxqkgXoorgCgVkKkBOb_Kk28qZTFOOsg&s" class="card-img-top" style="height: 200px; object-fit: cover;" alt="mustang mach e">
+                <div class="card-body">
+                    <h5 class="card-title">Mustang Mach E</h5>
+                    <p class="card-text">A car suitable for off road and city drives</p>
+                </div>
+                <div class="card-footer" style="background-color: #4CBB17; ">
+                    <small class="text-body-secondary">Last rented 6 days ago</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
