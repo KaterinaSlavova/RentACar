@@ -28,21 +28,6 @@
                     <h5 class="card-title">Rolls Royce Spectre</h5>
                     <p class="card-text">A luxurious car used for parties and official events</p>
                 </div>
-               @*  @foreach( var item in Model)
-                {
-                   @if (DateTime.Now >= @Html.DisplayFor(modelItem => item.StartDay) && DateTime.Now <= @Html.DisplayFor(modelItem => item.EndDay))
-                   { *@
-                    <div class="card-footer" style="background-color: #DA291C; ">
-                        <small class="text-body-secondary">Currently rented </small>
-                    </div>
-                  @*  }
-                   else
-                   { *@
-                    @* <div class="card-footer" style="background-color: #4CBB17;">
-                        <small class="text-body-secondary">Rent for@Html.DisplayFor(modelItem => item.Price)$</small>
-                    </div> *@
-                @*    }
-                } *@
             </div>
         </div>
         <div class="col">

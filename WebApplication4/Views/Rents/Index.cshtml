@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Rent_a_Car.Models.Rent>
 
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -11,32 +12,30 @@
         Rent
     </a>
 </p>
+
 <div class="text-center">
-    @foreach (var item in Model)
-    {
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model)
+        {
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Name: @Html.DisplayFor(modelItem => item.FirstName)</h5>
                         <p class="card-text">Email: @Html.DisplayFor(modelItem => item.Email)</p>
                     </div>
-                     <div class="card-footer" style="background-color: #DA291C;">
-                            <small class="text-body-secondary">Currently rented</small>
-                            <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                                <i class="fa-solid fa-pen-to-square"></i>  Edit
-                            </a>
-
-                            <a asp-action="Details" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                                <i class="fa-solid fa-info"></i>  Details
-                            </a>
-
-                            <a asp-action="Delete" class="btn btn-outline-primary" asp-route-id="@item.Id">
-                                <i class="fa-solid fa-trash"></i> Delete
-                            </a>
-                     </div>
+                    <div class="card-footer" style="background-color: #DA291C;">
+                        <a asp-action="Edit" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                            <i class="fa-solid fa-pen-to-square"></i> Edit
+                        </a>
+                        <a asp-action="Details" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                            <i class="fa-solid fa-info"></i> Details
+                        </a>
+                        <a asp-action="Delete" class="btn btn-outline-primary" asp-route-id="@item.Id">
+                            <i class="fa-solid fa-trash"></i> Delete
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
